@@ -10,7 +10,7 @@ builder.Services.AddDbContext<BigfootDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<Customer>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<BigfootDbContext>();
 builder.Services.AddControllersWithViews();
 
